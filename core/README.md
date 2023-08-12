@@ -33,6 +33,10 @@ export default function App() {
 }
 ```
 
+## Related
+
+- [useOnline](https://github.com/uiwjs/react-use-online) `useOnline` is a tiny, zero-dependency hook for responding to online/offline changes.
+
 ## Contributors
 
 As always, thanks to our amazing contributors!
