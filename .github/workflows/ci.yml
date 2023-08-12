@@ -35,8 +35,6 @@ jobs:
           output: website/build/badges.svg
 
       - run: cp -rp coverage website/build
-      - run: cp -rp core/dist/*js website/build
-      - run: cp -rp core/dist/*css website/build
 
       - name: Is a tag created auto?
         id: create_tag
@@ -78,10 +76,15 @@ jobs:
             
             ${{ steps.changelog.outputs.changelog }}
 
-      # - run: npm publish --access public
-      #   name: 📦 @uiw/react-use-colorscheme to NPM
-      #   working-directory: core
-      #   continue-on-error: true
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: package.json info
+        uses: jaywcjlove/github-action-package@main
+        with:
+          unset: devDependencies
+
+      - run: npm publish --access public
+        name: 📦 @uiw/react-use-colorscheme to NPM
+        working-directory: core
+        continue-on-error: true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     
