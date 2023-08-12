@@ -1,20 +1,27 @@
-import React from 'react';
-import './styles/index.less';
+import React, { useSyncExternalStore } from 'react';
 
-export interface MonorepoTemplateProps extends React.AllHTMLAttributes<HTMLDivElement> {
-  prefixCls?: string;
+export enum ColorScheme {
+  Dark = 'dark',
+  Light = 'light',
+  NoPreference = 'no-preference',
 }
 
-export default function MonorepoTemplate(props: MonorepoTemplateProps = {}) {
-  const { className, prefixCls = 'w-template', children, ...others } = props;
-  const cls = [className, prefixCls].filter(Boolean).join(' ');
-  return (
-    <div {...others} className={cls}>
-      {children &&
-        React.Children.map(children, (child) => {
-          if (React.isValidElement(child)) return child;
-          return <span> {child} </span>;
-        })}
-    </div>
-  );
+function getSnapshot() {
+  return ColorScheme;
+}
+
+function getServerSnapshot() {
+  return ColorScheme;
+}
+
+function subscribe(callback: () => void) {
+  document.addEventListener('colorschemechange', callback);
+  return () => {
+    document.removeEventListener('colorschemechange', callback);
+  };
+}
+
+export function useColorScheme() {
+  const colorscheme = useSyncExternalStore<ColorScheme>(subscribe, getSnapshot, getServerSnapshot);
+  return colorscheme;
 }

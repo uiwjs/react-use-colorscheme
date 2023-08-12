@@ -1,12 +1,12 @@
 {
-  "name": "@uiw/react-monorepo-template",
-  "version": "1.1.0",
-  "description": "React Monorepo Template.",
+  "name": "@uiw/react-use-colorscheme",
+  "version": "0.0.1",
+  "description": "useColorScheme() provides access to the devices color scheme.",
   "author": "Kenny Wong <wowohoo@qq.com>",
-  "homepage": "https://uiwjs.github.io/react-monorepo-template",
+  "homepage": "https://uiwjs.github.io/react-use-colorscheme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/uiwjs/react-monorepo-template.git"
+    "url": "https://github.com/uiwjs/react-use-colorscheme.git"
   },
   "license": "MIT",
   "main": "./cjs/index.js",
@@ -22,7 +22,8 @@
     "access": "public"
   },
   "keywords": [
-    "react-monorepo-template",
+    "react-use-colorscheme",
+    "colorscheme",
     "react.js",
     "react",
     "template",

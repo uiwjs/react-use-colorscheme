@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import MarkdownPreviewExample from '@uiw/react-markdown-preview-example';
-import pkg from '@uiw/react-monorepo-template/package.json';
-import data from '@uiw/react-monorepo-template/README.md';
+import pkg from '@uiw/react-use-colorscheme/package.json';
+import data from '@uiw/react-use-colorscheme/README.md';
 
 const Github = MarkdownPreviewExample.Github;
 
@@ -16,6 +16,6 @@ root.render(
     description="Simple React package development project example template."
     version={`v${VERSION}`}
   >
-    <Github href="https://github.com/uiwjs/react-monorepo-template" />
+    <Github href="https://github.com/uiwjs/react-use-colorscheme" />
   </MarkdownPreviewExample>,
 );

@@ -95,7 +95,7 @@ jobs:
           name: ${{ steps.changelog.outputs.tag }}
           tag: ${{ steps.changelog.outputs.tag }}
           body: |
-            Documentation ${{ steps.changelog.outputs.tag }}: https://raw.githack.com/uiwjs/react-monorepo-template/${{ steps.changelog.outputs.gh-pages-short-hash }}/index.html  
+            Documentation ${{ steps.changelog.outputs.tag }}: https://raw.githack.com/uiwjs/react-use-colorscheme/${{ steps.changelog.outputs.gh-pages-short-hash }}/index.html  
             Comparing Changes: ${{ steps.changelog.outputs.compareurl }}  
             
             ${{ steps.changelog.outputs.changelog }}
@@ -111,7 +111,7 @@ jobs:
       #     package: ./core/package.json
 
       # - run: npm publish --access public
-      #   name: 📦 @uiw/react-monorepo-template to NPM
+      #   name: 📦 @uiw/react-use-colorscheme to NPM
       #   working-directory: core
       #   continue-on-error: true
       #   env:
