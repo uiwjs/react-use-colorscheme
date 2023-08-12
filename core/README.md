@@ -21,11 +21,13 @@ import React from "react";
 import { useColorScheme } from '@uiw/react-use-colorscheme';
 
 export default function App() {
-  const colorTheme = useColorScheme();
+  const colorScheme = useColorScheme();
   return (
     <div>
       <h1 style={{ margin: 0 }}>useColorScheme</h1>
-      <div>{colorScheme}</div>
+      <div>{colorScheme === 'dark' ? '🌒 dark' : '🌞 light'}</div>
+      <p>Test by setting light and dark themes in your OS</p>
+      <img style={{ maxWidth: 520 }} src="https://github.com/uiwjs/react-use-online/assets/1680273/38090578-258c-496d-afdb-0493677e12f9" />
     </div>
   );
 }

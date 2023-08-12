@@ -7,17 +7,21 @@ export enum ColorScheme {
 }
 
 function getSnapshot() {
-  return ColorScheme;
+  const matcher = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  return matcher ? ColorScheme.Dark : ColorScheme.Light;
 }
 
 function getServerSnapshot() {
-  return ColorScheme;
+  return ColorScheme.NoPreference;
 }
 
 function subscribe(callback: () => void) {
-  document.addEventListener('colorschemechange', callback);
+  const matcher = window.matchMedia('(prefers-color-scheme: dark)');
+  matcher.addEventListener('change', callback);
   return () => {
-    document.removeEventListener('colorschemechange', callback);
+    if (matcher) {
+      matcher.removeEventListener('change', callback);
+    }
   };
 }
 
