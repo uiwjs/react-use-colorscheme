@@ -1,6 +1,6 @@
 {
   "name": "@uiw/react-use-colorscheme",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "useColorScheme() provides access to the devices color scheme.",
   "author": "Kenny Wong <wowohoo@qq.com>",
   "homepage": "https://uiwjs.github.io/react-use-colorscheme",
