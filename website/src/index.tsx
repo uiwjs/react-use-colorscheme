@@ -12,8 +12,8 @@ root.render(
     source={data.source}
     components={data.components}
     data={data.data}
-    title={pkg.name}
-    description="Simple React package development project example template."
+    title="React useColorScheme hooks"
+    description={pkg.description}
     version={`v${VERSION}`}
   >
     <Github href="https://github.com/uiwjs/react-use-colorscheme" />
