@@ -44,7 +44,7 @@
     "@kkt/less-modules": "^7.5.2",
     "@kkt/ncc": "^1.0.15",
     "compile-less-cli": "^1.8.13",
-    "husky": "^8.0.1",
+    "husky": "^9.0.0",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.6.0",
     "jest-environment-node": "^29.5.0",
